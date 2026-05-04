@@ -14,15 +14,9 @@ tmp/
 *.mp4
 *.wav
 
-# Model checkpoints
-checkpoints/
-*.pth
-*.pt
-
 # Claude Code
 .claude/
 
-# External large models
-external/*/models/
+# External - only exclude the oversized voice model (>100MB GitHub limit)
 external/voice_emotion/wav2vec2_emotion_model.pth
 external/voice_emotion/__pycache__/
