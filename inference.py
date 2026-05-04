@@ -45,7 +45,7 @@ class MultimodalEmotionRecognizer:
         self.model.load_state_dict(checkpoint['model_state_dict'])
         print(f"模型加载成功: {model_path}")
         if 'val_acc' in checkpoint:
-            print(f"验证准确率: {min(checkpoint['val_acc'] + 0.2, 1.0):.4f}")
+            print(f"验证准确率: {checkpoint['val_acc']:.4f}")
 
     def predict(self, video_path=None, audio_path=None, text=None):
         """
